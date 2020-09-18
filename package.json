@@ -1,0 +1,46 @@
+{
+  "name": "node-backdoor",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run check"
+  },
+  "devDependencies": {
+    "@types/ascii-art": "^1.4.0",
+    "@types/figlet": "^1.2.0",
+    "@types/node": "^13.11.1",
+    "assemblyscript": "^0.14.10",
+    "gts": "^2.0.2",
+    "nexe": "^3.3.7",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.62",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.14.10",
+    "@types/child-process-promise": "^2.2.1",
+    "@types/cwd": "^0.10.0",
+    "ascii-art": "^2.5.0",
+    "boxen": "^4.2.0",
+    "child-process-promise": "^2.2.1",
+    "colors": "^1.4.0",
+    "cwd": "^0.10.0",
+    "figlet-promised": "^1.0.0",
+    "input": "^1.0.1",
+    "yargs": "^16.0.3"
+  }
+}
