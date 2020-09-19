@@ -26,6 +26,7 @@
     "@types/ascii-art": "^1.4.0",
     "@types/figlet": "^1.2.0",
     "@types/node": "^13.11.1",
+    "@types/yargs": "^15.0.5",
     "assemblyscript": "^0.14.10",
     "gts": "^2.0.2",
     "nexe": "^3.3.7",

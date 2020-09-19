@@ -8,42 +8,42 @@ import {exec} from 'child-process-promise';
 import cwd from 'cwd';
 import {compile} from 'nexe';
 import {windowClear} from './helpers';
+// ████████████████████████
+// ████████████████████████
+// ████████████████████████
+// ████████████████████████
+// ████████████████████████
+// ██████████  ████    ████   big thanks to the creator of this
+// ██████████  ██  ████████   guy, great language :DDDD
+// ██████████  ████    ████
+// ██████████  ████████  ██
+// ██████████  ██  ████  ██
+// ██████    ██████    ████
+// ████████████████████████
 windowClear();
 (async () => {
   console.log(
-    boxen(
-      `  _____ _   _ _____       _ ____    ____    _    ____ _  ______   ___   ___  ____
- |_   _| | | | ____|     | / ___|  | __ )  / \\  / ___| |/ /  _ \\ / _ \\ / _ \\|  _ \\
-   | | | |_| |  _|    _  | \\___ \\  |  _ \\ / _ \\| |   | ' /| | | | | | | | | | |_) |
-   | | |  _  | |___  | |_| |___) | | |_) / ___ \\ |___| . \\| |_| | |_| | |_| |  _ <
-   |_| |_| |_|_____|  \\___/|____/  |____/_/   \\_\\____|_|\\_\\____/ \\___/ \\___/|_| \\_\\
-`,
-      {padding: 1}
-    ).blue
+    `+-------------------------------------------------+
+|                                                 |
+|                                                 |
+|       ____  _______        ____  __             |
+|      | __ )| ____\\ \\      / |  \\/  |            |
+|      |  _ \\|  _|  \\ \\ /\\ / /| |\\/| |            |
+|      | |_) | |___  \\ V  V / | |  | |            |
+|      |____/|_____|  \\_/\\_/  |_|  |_|.js         |
+|                                                 |
+|        Backdoors Effortlessly, With             |
+|        Mainly JavaScript.                       |
+|                                                 |
+|                                                 |
+|                                                 |
+|                                                 |
+|                                                 |
+|                                       Jabster28 |
++-------------------------------------------------+
+`.blue
   );
-  console.log('==========================='.red);
-  console.log('|   made by jabster28 :)  |'.red);
-  console.log('==========================='.red);
   console.log('\n\n');
-
-  console.log(
-    boxen(
-      `    ████████████████████████
-    ████████████████████████
-    ████████████████████████
-    ████████████████████████
-    ████████████████████████
-    ██████████  ████    ████   big thanks to the creator of this 
-    ██████████  ██  ████████   guy, great language :DDDD
-    ██████████  ████    ████
-    ██████████  ████████  ██
-    ██████████  ██  ████  ██
-    ██████    ██████    ████
-    ████████████████████████\n\n`,
-      {padding: 1}
-    ).yellow
-  );
-
   select("So, what's tickling your fancy today?", [
     'Make a backdoor',
     'Already made a backdoor? Connect to it now',
@@ -51,7 +51,7 @@ windowClear();
   ]).then(async (e: string) => {
     switch (e) {
       case 'Make a backdoor':
-        select('What architecture would you want to target?', [
+        select('What architecture do you want to target?', [
           'linux',
           'darwin',
           'windows',
@@ -64,11 +64,15 @@ windowClear();
             console.log(boxen('ERROR!!!').red);
             console.error(error);
           }
-          console.log(boxen('Packaging JS backdoor to binary...').gray + '\n');
+          console.log(
+            boxen(
+              'Packaging JS backdoor to binary... (may take a while, please be patient!)'
+            ).gray + '\n'
+          );
           try {
             compile({
               targets: [a],
-              input: cwd() + '/build/client.js',
+              input: cwd() + `/build/${a}.js`,
               output: 'build/' + a,
             });
           } catch (error) {
