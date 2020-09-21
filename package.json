@@ -30,6 +30,7 @@
     "assemblyscript": "0.14.10",
     "gts": "2.0.2",
     "nexe": "3.3.7",
+    "pkg": "^4.4.9",
     "ts-node": "9.0.0",
     "ts-node-dev": "1.0.0-pre.62",
     "typescript": "3.9.7"
@@ -46,5 +47,9 @@
     "figlet-promised": "^1.0.0",
     "input": "^1.0.1",
     "yargs": "^16.0.3"
+  },
+  "bin": "build/main.js",
+  "pkg": {
+    "assets": "node_modules/figlet/fonts/Standard.flf"
   }
 }
