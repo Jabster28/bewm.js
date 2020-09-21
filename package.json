@@ -20,7 +20,9 @@
     "posttest": "yarn run check",
     "asbuild:untouched": "asc assembly/index.ts --target debug",
     "asbuild:optimized": "asc assembly/index.ts --target release",
-    "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized"
+    "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "@types/ascii-art": "1.4.0",
@@ -33,7 +35,8 @@
     "pkg": "^4.4.9",
     "ts-node": "9.0.0",
     "ts-node-dev": "1.0.0-pre.62",
-    "typescript": "3.9.7"
+    "typescript": "3.9.7",
+    "vuepress": "^1.5.4"
   },
   "dependencies": {
     "@assemblyscript/loader": "^0.14.10",
