@@ -24,16 +24,24 @@ console.log(argv);
 
 windowClear();
 (async () => {
-  console.log(boxen("You've successfully installed a backdoor client!"));
-  console.log(boxen("(now's a good time to pat yourself on the back)").yellow);
+  console.log(
+    `+-------------------------------------------+
+|     ____  _______        ____  __ _ _ _   |
+|    | __ )| ____\\ \\      / |  \\/  | | | |  |
+|    |  _ \\|  _|  \\ \\ /\\ / /| |\\/| | | | |  |
+|    | |_) | |___  \\ V  V / | |  | |_|_|_|  |
+|    |____/|_____|  \\_/\\_/  |_|  |_(_(_(_)  |
+|                                           |
++-------------------------------------------+`.bgYellow
+  );
   await sleep(1500);
   console.log('Checking dependencies...');
   try {
     await exec('which screen');
     console.log('screen'.green);
   } catch (e) {
-    if (e.stdout == '') throw Error("No 'screen' executable found");
     console.log(boxen('ERROR!!!').red);
+    if (e.stdout == '') throw Error("No 'screen' executable found");
     console.error(e);
   }
   try {
@@ -98,7 +106,7 @@ windowClear();
     switch (res) {
       case 'Exit':
         exit = true;
-        console.log(await ascii('byee !!!'));
+        console.log('byee!!!');
         await sleep(1500);
         windowClear();
         return;

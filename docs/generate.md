@@ -21,4 +21,4 @@ The program will tell you which command to run to generate whatever you asked fo
 yarn pkg . --targets macos # example for macos
 ```
 
-Once that's done, you should have a binary called `node-backdoor ` in your project directory. Congratulations! Now you need to find a way to get that file on your target's computer, and this sadly won't be able to help you with that. It's a backdoor *creater*, you're the one in charge of finding a way to get your target to execute the file.
+Once that's done, you should have a binary called `bewm ` in your project directory. Congratulations! Now you need to find a way to get that file on your target's computer, and this sadly won't be able to help you with that. It's a backdoor _creater_, you're the one in charge of finding a way to get your target to execute the file.
