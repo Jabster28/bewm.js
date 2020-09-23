@@ -8,6 +8,10 @@ module.exports = {
         title: 'Usage',
         children: ['/cloning', '/generate'],
       },
+      {
+        title: 'Payloads (macOS)',
+        children: ['/mac_shell'],
+      },
     ],
   },
 };
