@@ -30,7 +30,7 @@
     "@types/figlet": "1.2.0",
     "@types/node": "13.13.21",
     "@types/yargs": "15.0.6",
-    "assemblyscript": "0.14.10",
+    "assemblyscript": "0.14.11",
     "gts": "2.0.2",
     "nexe": "3.3.7",
     "pkg": "4.4.9",
