@@ -10,6 +10,9 @@ import {select, confirm, text} from 'input';
 import {exec} from 'child-process-promise';
 import {windowClear, sleep} from './helpers';
 import {readFileSync} from 'fs';
+/**
+ * @description Config that was made in index.ts
+ */
 const json: {
   remoteShell?: {
     ip?: string;
@@ -17,6 +20,9 @@ const json: {
   };
   // eslint-disable-next-line @typescript-eslint/no-var-requires
 } = JSON.parse(readFileSync('build/config.json').toString());
+/**
+ * List of arguments that were given to the executable
+ */
 const argv = yargs
   .usage('Usage: run `$0` and select what ya wanna do')
   .alias('d', 'default')
@@ -65,6 +71,9 @@ else windowClear();
     }
   }
   console.log('dependencies checked!');
+  /**
+   * @description Tells the program whether to exit or not
+   */
   let exit = false;
   if (argv.default) {
     let config: {
@@ -128,12 +137,18 @@ else windowClear();
             }
           }
         }
+        /**
+         * Whether to add the shell to cron (/60s)
+         */
         const daemon = await confirm(
           'Add this to cron (persist after restart)?',
           {
             default: false,
           }
         );
+        /**
+         * Path to the binary being currently executed
+         */
         let path = '';
         if (daemon) {
           while (path.trim() == '')

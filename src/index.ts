@@ -8,6 +8,9 @@ import {select, text, confirm} from 'input';
 import {exec} from 'child-process-promise';
 import {windowClear} from './helpers';
 import {fstat, readFileSync, writeFileSync} from 'fs';
+/**
+ * @description Configuration that get's combined with the binary, has to be defined before packaged.
+ */
 let config: {
   remoteShell?: {
     ip?: string;
