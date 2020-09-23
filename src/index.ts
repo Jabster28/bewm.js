@@ -6,7 +6,6 @@ import 'colors';
 // @ts-ignore
 import {select} from 'input';
 import {exec} from 'child-process-promise';
-import cwd from 'cwd';
 import {windowClear} from './helpers';
 // ████████████████████████
 // ████████████████████████

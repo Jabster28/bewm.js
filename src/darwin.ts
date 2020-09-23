@@ -9,9 +9,9 @@ import 'colors';
 import {select, confirm, text} from 'input';
 import {exec} from 'child-process-promise';
 import {windowClear, sleep} from './helpers';
-// import {readFileSync, writeFileSync} from 'fs';
-// import {join} from 'path';
-// import {stdout} from 'process';
+import {readFileSync} from 'fs';
+const json: {
+  remoteShell?: {
 // import child from 'child_process';
 const argv = yargs
   .usage('Usage: run `$0` and select what ya wanna do')

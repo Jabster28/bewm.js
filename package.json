@@ -47,7 +47,6 @@
     "boxen": "^4.2.0",
     "child-process-promise": "^2.2.1",
     "colors": "^1.4.0",
-    "cwd": "^0.10.0",
     "figlet-promised": "^1.0.0",
     "input": "^1.0.1",
     "yargs": "^16.0.3"
