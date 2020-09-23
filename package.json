@@ -53,6 +53,9 @@
   },
   "bin": "build/main.js",
   "pkg": {
-    "assets": "node_modules/figlet/fonts/Standard.flf"
+    "assets": [
+      "node_modules/figlet/fonts/Standard.flf",
+      "build/config.json"
+    ]
   }
 }
