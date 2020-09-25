@@ -16,7 +16,7 @@ If you're at this stage, you've successfully bewm'd your target. Congratulations
 
 ## Port and IP Setup
 
-In this repo, I use the website `jabster28.myddns.me`, which allows me to have a static address while still having a dynamic IP. Therefore, if you wish to use this yourself, you need to replace it with your public IP (assuming you have a static one) or get a free domain at [no-ip](https://www.noip.com/).
+In my examples, I reference the port number 5555 and use the website `jabster28.myddns.me` (which allows me to have a static address while still having a dynamic IP), so if you wish to use this yourself, you need to replace the config with your port number and public IP (assuming you have a static one, or get a free domain at [no-ip.com](https://www.noip.com/)). You can do this by running `yarn dev` in the project directory and selecting 'config', then 'hidden shell'
 
 ## Local `socat`
 
@@ -31,9 +31,10 @@ which tells `socat` to expect a full TTY (a proper terminal, with tabbing and jo
 ::: tip
 If you enable adding to cron, you don't need to do this first as the victim will try to connect to the attacking computer every minute.
 :::
+
 ## Running the executable
 
-Once you've ran the executable, it should check for some dependencies, notably `screen` (comes with every macOS installation) and `socat` (like `nc`, but better; automatically installs if it isn't present). After that, you'll be greeted with some options like so:
+Once you've ran the executable on the target machine, it should check for some dependencies, notably `screen` (comes with every macOS installation) and `socat` (like `nc`, but better; automatically installs if it isn't present). After that, you'll be greeted with some options like so:
 
 ![List of choices](./shell.png)
 
