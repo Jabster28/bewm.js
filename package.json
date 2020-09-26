@@ -1,6 +1,6 @@
 {
   "name": "bewm.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -10,6 +10,7 @@
   "license": "Apache-2.0",
   "keywords": [],
   "scripts": {
+    "release": "standard-version",
     "dev": "ts-node src/index.ts",
     "test": "node tests",
     "check": "gts check",
