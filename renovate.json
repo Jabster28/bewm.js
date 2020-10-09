@@ -1,5 +1,24 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "semanticCommits": true,
+  "default": {
+    "labels": ["📌 dependencies"],
+    "commitMessagePrefix": "chore(deps): ⬆️",
+    "commitMessageAction": "Upgrade",
+    "major": {
+      "automerge": false
+    },
+    "packageRules": [
+      {
+        "updateTypes": ["pin"],
+        "commitMessagePrefix": "chore(deps): 📌",
+        "commitMessageAction": "Pin"
+      },
+      {
+        "updateTypes": ["rollback"],
+        "commitMessagePrefix": "chore(deps): ⬇️",
+        "commitMessageAction": "Downgrade"
+      }
+    ]
+  }
 }
