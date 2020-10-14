@@ -109,7 +109,6 @@ else windowClear();
     const res: string = await select(
       "So, Mr. Hackerman, what's on the agenda?",
       [
-        'Websocket reverse TCP',
         'Create Hidden Shell (remote access v1)',
         'Exit',
       ]
