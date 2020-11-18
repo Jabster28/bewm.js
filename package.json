@@ -27,7 +27,7 @@
     "@types/ascii-art": "1.4.0",
     "@types/figlet": "1.2.0",
     "@types/node": "13.13.21",
-    "@types/yargs": "15.0.7",
+    "@types/yargs": "15.0.10",
     "devmoji": "2.1.9",
     "gts": "2.0.2",
     "husky": "4.3.0",
