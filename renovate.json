@@ -17,6 +17,10 @@
       "updateTypes": ["rollback"],
       "commitMessagePrefix": "chore(deps): ⬇️",
       "commitMessageAction": "Downgrade"
+    },
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
     }
   ]
 }
