@@ -4085,10 +4085,10 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
-devmoji@2.1.12:
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/devmoji/-/devmoji-2.1.12.tgz#798e8cab77179ee4ad73e5122e2737c86befc5c6"
-  integrity sha512-nfcxqT1P8H3oFNheTqudv8e3ePqlLU+kQ88Kn42rfbla5ZeqnXXSiAIPacBnxMQboc9zU0Q8bi05FkV1JlqNnQ==
+devmoji@2.1.13:
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/devmoji/-/devmoji-2.1.13.tgz#b6cb7a6a25b80c1c328ffd734e75416d349be1d5"
+  integrity sha512-CyToAgcVawtaDtQp906noln4Gl+IFWq9Bs95ht4o9LeYc5oVfOg/2KEE3sKYZHP74h7/PNrE465z7bSjIHRHyw==
   dependencies:
     chalk "^4.1.0"
     commander "6.2.0"
