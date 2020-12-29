@@ -43,7 +43,7 @@
     "@types/child-process-promise": "^2.2.1",
     "@types/cwd": "^0.10.0",
     "ascii-art": "^2.5.0",
-    "boxen": "^4.2.0",
+    "boxen": "^5.0.0",
     "child-process-promise": "^2.2.1",
     "colors": "^1.4.0",
     "figlet-promised": "^1.0.0",
