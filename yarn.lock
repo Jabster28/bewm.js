@@ -2868,10 +2868,10 @@ commander@2.17.x:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
-commander@6.2.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.0.tgz#b990bfb8ac030aedc6d11bc04d1488ffef56db75"
-  integrity sha512-zP4jEKbe8SHzKJYQmq8Y9gYjtO/POJLgIdKgV7B9qNmABVFVc+ctqSX6iXh4mCpJfRBOabiZ2YKPg8ciDw6C+Q==
+commander@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-7.1.0.tgz#f2eaecf131f10e36e07d894698226e36ae0eb5ff"
+  integrity sha512-pRxBna3MJe6HKnBGsDyMv8ETbptw3axEdYHoqNh7gu5oDcew8fs0xnivZGm06Ogk8zGAJ9VX+OPEr2GXEQK4dg==
 
 commander@~2.19.0:
   version "2.19.0"
@@ -4088,14 +4088,14 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
-devmoji@2.1.13:
-  version "2.1.13"
-  resolved "https://registry.yarnpkg.com/devmoji/-/devmoji-2.1.13.tgz#b6cb7a6a25b80c1c328ffd734e75416d349be1d5"
-  integrity sha512-CyToAgcVawtaDtQp906noln4Gl+IFWq9Bs95ht4o9LeYc5oVfOg/2KEE3sKYZHP74h7/PNrE465z7bSjIHRHyw==
+devmoji@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/devmoji/-/devmoji-2.2.0.tgz#3b747ba2b79cb1a8ebbcde13a5dc65e3a25d319b"
+  integrity sha512-8I+/VAM3Bpu0jTgOQ0co1+FCtoRdRPLwzY/Kt6w5Ns/UKo4H4mPB5YZ5zn1WJhquzYQcc9WL9E3W8F9N58KZ/w==
   dependencies:
     chalk "^4.1.0"
-    commander "6.2.0"
-    ts-interface-checker "0.1.13"
+    commander "7.1.0"
+    ts-interface-checker "0.2.0"
 
 diff@^4.0.1:
   version "4.0.2"
@@ -10625,10 +10625,10 @@ trim-repeated@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-ts-interface-checker@0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
-  integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
+ts-interface-checker@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.2.0.tgz#4a87c0daac4eceaece401b37c86fa98486caf699"
+  integrity sha512-wkqy1TC9FxALfAl10ov0joZK5aXjIhnOYBe26XSPiRD0UemFuQOF7D/LowiCFu5gbjYJc+ao0H+I50YYU9oKVA==
 
 ts-node-dev@1.1.1:
   version "1.1.1"
