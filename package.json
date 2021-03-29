@@ -30,7 +30,7 @@
     "@types/yargs": "15.0.13",
     "devmoji": "2.2.0",
     "gts": "3.1.0",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "nexe": "3.3.7",
     "pkg": "4.5.1",
     "standard-version": "9.1.1",
