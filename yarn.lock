@@ -972,10 +972,10 @@
   resolved "https://registry.yarnpkg.com/@types/cwd/-/cwd-0.10.0.tgz#80305fb209439754bfeb4550a98e78dc2da2ecd1"
   integrity sha512-DpCQLallLsMpPxUp+OIkN5zHZV64w8ESDPCbjjbzdX5S6ycVSYiTVURx+B19zQkNQxFD5TB/9TRH8564iCWemQ==
 
-"@types/figlet@1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@types/figlet/-/figlet-1.5.0.tgz#6a90e52614d299b558e9ae8b9c92931b00f857bf"
-  integrity sha512-LffgrNrwx2bs52gXSuycuMSbxwnVgNeWJAEyo8dNnDcIqNCZ13zNJeoNU2IWs62EeUORIj34zkEN7oeMrWdJ8Q==
+"@types/figlet@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@types/figlet/-/figlet-1.5.1.tgz#a9f06317b8900b7d3ad8d8bb577ec26225ac16a8"
+  integrity sha512-dwOwRPJY122FcWRdiXic+H72AOD+Cx69NO6Z9STtm9eIvM47qBe0vXdD/w4ad+ygIqvSTdnQyeMwlxotDjlvPg==
 
 "@types/glob@^7.1.1":
   version "7.1.3"
